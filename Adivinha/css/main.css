@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Palette+Mosaic&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: "Love Ya Like A Sister", cursive;
+  color: #2C2C54;
+  background: repeat url(../assets/background.jpg);
+}
+
+h1 {
+  font-family: "Palette Mosaic", cursive;
+  color: #2C2C54;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+}
+
+p {
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.game {
+  min-width: 600px;
+  min-height: 600px;
+  margin-top: 50px;
+  border: #2C2C54 dashed;
+  border-radius: 20px;
+  background-color: #dedeed;
+}
+.game h1 {
+  padding-top: 15px;
+}
+
+label p {
+  padding-top: 100px;
+}
+
+select {
+  font-family: "Love Ya Like A Sister", cursive;
+  font-weight: 400;
+  font-size: 20px;
+  background-color: #2C2C54;
+  color: #dedeed;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  outline: none;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+button {
+  font-family: "Love Ya Like A Sister", cursive;
+  font-weight: 400;
+  color: #2C2C54;
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+  border: #2C2C54 dashed;
+  border-radius: 20px;
+  margin-top: 20px;
+  min-width: 110px;
+  background-color: #dedeed;
+  text-transform: uppercase;
+}
+button:hover {
+  color: #dedeed;
+  background-color: #2C2C54;
+}
+
+input {
+  font-family: "Love Ya Like A Sister", cursive;
+  font-weight: 400;
+  color: #2C2C54;
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+  border: #2C2C54 dashed;
+  max-width: 150px;
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-top: 10px;
+  background-color: #dedeed;
+  outline: none;
+}
+
+ul {
+  height: 250px;
+  -webkit-columns: 1;
+     -moz-columns: 1;
+          columns: 1;
+  margin-left: 30px;
+  display: inline-block;
+}
+ul li {
+  font-size: 40px;
+  padding-bottom: 10px;
+  padding-right: 25px;
+  list-style-type: none;
+}
+
+.arrow-up {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  background: url(../assets/arrow.png);
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.arrow-down {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  background: url(../assets/arrow.png);
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+}
+
+.part-2 p {
+  font-size: 25px;
+}
+
+.part-3 p {
+  margin: 10px 0;
+}
+
+.smile {
+  font-size: 250px;
+  text-align: center;
+  color: #2C2C54;
+  line-height: 250px;
+}
+
+.end-time {
+  color: #c10000;
+}

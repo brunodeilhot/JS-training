@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Palette+Mosaic&display=swap');
+
+
+$black: #000;
+$b-color: #2C2C54;
+$b-color2: hsl(240, 31%, 90%);
+$time-red: #c10000;
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Love Ya Like A Sister', cursive;
+  color: $b-color;
+  background: repeat url(../assets/background.jpg);
+}
+
+h1 {
+    font-family: 'Palette Mosaic', cursive;
+    color: $b-color;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+}
+
+p {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.game {
+    min-width: 600px;
+    min-height: 600px;
+    margin-top: 50px;
+    border: $b-color dashed;
+    border-radius: 20px;
+    background-color: $b-color2;
+    h1 {
+        padding-top: 15px;
+    }
+}
+
+label {
+    p {
+        padding-top: 100px;
+    }
+}
+
+select {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: $b-color;
+    color: $b-color2;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    outline: none;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+button {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-weight: 400;
+    color: $b-color;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    border: $b-color dashed;
+    border-radius: 20px;
+    margin-top: 20px;
+    min-width: 110px;
+    background-color: $b-color2;
+    text-transform: uppercase;
+    &:hover {
+        color: $b-color2;
+        background-color: $b-color;
+    }
+}
+
+input {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-weight: 400;
+    color: $b-color;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    border: $b-color dashed;
+    max-width: 150px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: $b-color2;
+    outline: none;
+}
+
+ul {
+    height: 250px;
+    columns: 1;
+    margin-left: 30px;
+    display: inline-block;
+    li {
+        font-size: 40px;
+        padding-bottom: 10px;
+        padding-right: 25px;
+        list-style-type: none;
+    }
+}
+
+.arrow-up {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    background: url(../assets/arrow.png);
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+    transform: rotate(180deg);
+}
+
+.arrow-down {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    background: url(../assets/arrow.png);
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+}
+
+.part-2 {
+    p {
+        font-size: 25px;
+    }
+}
+
+.part-3 {
+    p {
+        margin: 10px 0;
+    }
+}
+
+.smile {
+    font-size: 250px;
+    text-align: center;
+    color: $b-color;
+    line-height: 250px;
+}
+
+.end-time {
+    color: $time-red;
+}

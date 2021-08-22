@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Adivinha</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="game">
+            <h1>Jogo do Adivinha</h1>
+
+            <div class="part-1">
+                <label for="level">
+                    <p>Vamos jogar!</p>
+                </label>
+                <p>
+                    <select id="level">
+                        <option value="1" disabled selected>Escolhe o nível de dificuldade</option>
+                        <option value="2">Nível 1 - 2 minutos com 15 tentativas</option>
+                        <option value="3">Nível 2 - 1 minuto com 10 tentativas</option>
+                        <option value="4">Nível 3 - 30 segundos com 5 tentativas</option>
+                    </select>
+                </p>
+                <p><button id="play">Jogar</button></p>
+                <p><button id="menu">Menu</button></p>
+            </div>
+
+            <div class="part-2 hidden">
+                <p id="countdown"></p>
+                <p>Escolhe um número de 1 a 100</p>
+                <p id="error" class="hidden">O número que escolheste não é válido</p>
+                <p id="duplicate" class="hidden">Já jogaste este número</p>
+                <p><input type="text" id="number" autofocus /><button id="confirm">Jogar!</button></p>
+                <ul id="numberlist"></ul>
+                <p id="attempts"></p>
+            </div>
+
+            <div class="part-3 hidden">
+                <p><span id="winner" class="smile">&#9786</span></p>
+                <p><span id="looser" class="smile">&#9785</span></p>
+                <p id="message"></p>
+                <p><button id="new-game">Novo Jogo</button></p>
+            </div>
+        </div>
+    </div>
+
+<script src="js/main.js"></script>
+</body>
+
+</html>
