@@ -6,6 +6,8 @@ const board1 = document.querySelectorAll('.board1');
 const board2 = document.querySelectorAll('.board2');
 const board3 = document.querySelectorAll('.board3');
 
+const frontCard = document.querySelectorAll('.front');
+
 const newGameButton = document.querySelector('#new-game');
 
 const returnButton = document.querySelector('#return');
@@ -88,25 +90,33 @@ function randomIntFromInterval(min,max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
+function removeClassByPrefix(element, prefix) {
+	var regx = new RegExp('\\b' + prefix + '[^ ]*[ ]?\\b', 'g');
+	element.className = element.className.replace(regx, '');
+}
+
 function clearCards() {
     if (levelId == 1) {
         for (let i = 0; i < board1.length; i++) {
             if (board1[i].classList.contains('active')) {
-                board1[i].classList.contains('active');
+                board1[i].classList.remove('active');
             }
         }
     } else if (levelId == 2) {
         for (let i = 0; i < board2.length; i++) {
             if (board2[i].classList.contains('active')) {
-                board2[i].classList.contains('active');
+                board2[i].classList.remove('active');
             }
         }
     } else if (levelId == 3) {
         for (let i = 0; i < board3.length; i++) {
             if (board3[i].classList.contains('active')) {
-                board3[i].classList.contains('active');
+                board3[i].classList.remove('active');
             }
         }
+    }
+    for (let i = 0; i < frontCard.length; i++) {
+        removeClassByPrefix(frontCard[i], 'card-');
     }
 }
 
@@ -187,6 +197,9 @@ function start() {
 
 
 function play() {
+
+    validateCard = [];
+    saveId = [];
 
     boardGenerate(levelId);
     showBoard(levelId);
