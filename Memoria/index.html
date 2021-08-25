@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div id="part-1" class="part-1">
+            <div class="column">
+                <div class="col-2-10">
+                    <h1>Jogo da Memória</h1>
+                </div>
+                <div class="col-2-90">
+                    <div class="column">
+                        <div class="col-3 level">
+                            <h2>Escolhe a dificuldade</h2>
+                            <div class="row">
+                                <div class="col-3">
+                                    <button id="level1">Fácil</button>
+                                </div>
+                                <div class="col-3">
+                                    <button id="level2">Normal</button>
+                                </div>
+                                <div class="col-3">
+                                    <button id="level3">Difícil</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="new-game" class="col-3">
+                            <button>Novo Jogo</button>
+                        </div>
+                        <div id="button-hidden" class="col-3 newgame"></div>
+                        <div class="col-3">
+                            <a href="../index.html"><button>Menu</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="part-2" class="part-2">
+            <div class="column">
+                <div class="col-2-10">
+                    <button id="return" class="return">Voltar ao Início</button>
+                </div>
+                <div class="col-2-90">
+                    <div id="end-message" class="end-message"><p></p></div>
+                    <div id="board-1" class="level-1">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="column">
+                                    <div class="col-4">
+                                        <div id="1-0" class="card board1">
+                                            <div id="pos1-1" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="1-1" class="card board1">
+                                            <div id="pos1-2" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="1-2" class="card board1">
+                                            <div id="pos1-3" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="1-3" class="card board1">
+                                            <div id="pos1-4" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="column">
+                                    <div class="col-4">
+                                        <div id="1-4" class="card board1">
+                                            <div id="pos1-5" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="1-5" class="card board1">
+                                            <div id="pos1-6" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="1-6" class="card board1">
+                                            <div id="pos1-7" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="1-7" class="card board1">
+                                            <div id="pos1-8" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="column">
+                                    <div class="col-4">
+                                        <div id="1-8" class="card board1">
+                                            <div id="pos1-9" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="1-9" class="card board1">
+                                            <div id="pos1-10" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="1-10" class="card board1">
+                                            <div id="pos1-11" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="1-11" class="card board1">
+                                            <div id="pos1-12" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="column">
+                                    <div class="col-4">
+                                        <div id="1-12" class="card board1">
+                                            <div id="pos1-13" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="1-13" class="card board1">
+                                            <div id="pos1-14" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="1-14" class="card board1">
+                                            <div id="pos1-15" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="1-15" class="card board1">
+                                            <div id="pos1-16" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="board-2" class="level-2">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="column">
+                                    <div class="col-4">
+                                        <div id="2-1" class="card board2">
+                                            <div id="pos2-1" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="2-2" class="card board2">
+                                            <div id="pos2-2" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="2-3" class="card board2">
+                                            <div id="pos2-3" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="2-4" class="card board2">
+                                            <div id="pos2-4" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="column">
+                                    <div class="col-4">
+                                        <div id="2-5" class="card board2">
+                                            <div id="pos2-5" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="2-6" class="card board2">
+                                            <div id="pos2-6" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="2-7" class="card board2">
+                                            <div id="pos2-7" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="2-8" class="card board2">
+                                            <div id="pos2-8" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="column">
+                                    <div class="col-4">
+                                        <div id="2-9" class="card board2">
+                                            <div id="pos2-9" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="2-10" class="card board2">
+                                            <div id="pos2-10" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="2-11" class="card board2">
+                                            <div id="pos2-11" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="2-12" class="card board2">
+                                            <div id="pos2-12" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="column">
+                                    <div class="col-4">
+                                        <div id="2-13" class="card board2">
+                                            <div id="pos2-13" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="2-14" class="card board2">
+                                            <div id="pos2-14" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="2-15" class="card board2">
+                                            <div id="pos2-15" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="2-16" class="card board2">
+                                            <div id="pos2-16" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="column">
+                                    <div class="col-4">
+                                        <div id="2-17" class="card board2">
+                                            <div id="pos2-17" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="2-18" class="card board2">
+                                            <div id="pos2-18" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="2-19" class="card board2">
+                                            <div id="pos2-19" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="2-20" class="card board2">
+                                            <div id="pos2-20" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="board-3" class="level-3">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="column">
+                                    <div class="col-4">
+                                        <div id="3-1" class="card board3">
+                                            <div id="pos3-1" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-2" class="card board3">
+                                            <div id="pos3-2" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-3" class="card board3">
+                                            <div id="pos3-3" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-4" class="card board3">
+                                            <div id="pos3-4" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="column">
+                                    <div class="col-4">
+                                        <div id="3-5" class="card board3">
+                                            <div id="pos3-5" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-6" class="card board3">
+                                            <div id="pos3-6" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-7" class="card board3">
+                                            <div id="pos3-7" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-8" class="card board3">
+                                            <div id="pos3-8" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="column">
+                                    <div class="col-4">
+                                        <div id="3-9" class="card board3">
+                                            <div id="pos3-9" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-10" class="card board3">
+                                            <div id="pos3-10" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-11" class="card board3">
+                                            <div id="pos3-11" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-11" class="card board3">
+                                            <div id="pos3-12" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="column">
+                                    <div class="col-4">
+                                        <div id="3-13" class="card board3">
+                                            <div id="pos3-13" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-14" class="card board3">
+                                            <div id="pos3-14" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-15" class="card board3">
+                                            <div id="pos3-15" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-16" class="card board3">
+                                            <div id="pos3-16" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="column">
+                                    <div class="col-4">
+                                        <div id="3-17" class="card board3">
+                                            <div id="pos3-17" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-18" class="card board3">
+                                            <div id="pos3-18" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-19" class="card board3">
+                                            <div id="pos3-19" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-20" class="card board3">
+                                            <div id="pos3-20" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="column">
+                                    <div class="col-4">
+                                        <div id="3-21" class="card board3">
+                                            <div id="pos3-21" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-22" class="card board3">
+                                            <div id="pos3-22" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-23" class="card board3">
+                                            <div id="pos3-23" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div id="3-24" class="card board3">
+                                            <div id="pos3-24" class="front"></div>
+                                            <div class="back"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/main.js"></script>
+</body>
+</html>
