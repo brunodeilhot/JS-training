@@ -200,6 +200,7 @@ function play() {
 
     validateCard = [];
     saveId = [];
+    moves = [];
 
     boardGenerate(levelId);
     showBoard(levelId);
@@ -281,6 +282,8 @@ function makeMove(event) {
 
 function validateMove(check1, check2) {
 
+    console.log(check1)
+    console.log(check2)
 
     if (checkPos[check1] != checkPos[check2]) {
         hideActive(saveId[0]);
