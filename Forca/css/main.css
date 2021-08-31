@@ -518,6 +518,7 @@ button {
   }
 }
 input {
+  -webkit-appearance: none;
   font-family: "Gamja Flower", cursive;
   font-size: 3rem;
   font-weight: 600;
@@ -847,9 +848,9 @@ input {
     position: absolute;
     width: 360px;
     height: 710px;
-    top: 37%;
+    top: 50%;
     left: 50%;
-    margin-top: -350px;
+    margin-top: -424px;
     margin-left: -180px;
     border-bottom: 5px solid #c9c9c9;
     border-left: none;
@@ -863,9 +864,9 @@ input {
     position: absolute;
     width: 360px;
     height: 131px;
-    top: 37%;
+    top: 50%;
     left: 50%;
-    margin-top: -350px;
+    margin-top: -326px;
     margin-left: -180px;
     border-bottom: none;
     border-radius: 0px;
@@ -875,9 +876,9 @@ input {
     position: absolute;
     width: 360px;
     height: 575px;
-    top: 37%;
+    top: 50%;
     left: 50%;
-    margin-top: -200px;
+    margin-top: -268px;
     margin-left: -180px;
     border-top: 5px solid #aed9ea;
     border-radius: 300px 300px 300px 300px/70px 70px 70px 70px;
@@ -891,9 +892,9 @@ input {
     position: absolute;
     width: 360px;
     height: 153px;
-    top: 37%;
+    top: 50%;
     left: 50%;
-    margin-top: -300px;
+    margin-top: -374px;
     margin-left: -180px;
     border-bottom: 5px solid #aed9ea;
     border-radius: 300px 300px/50px 50px;
@@ -966,9 +967,9 @@ input {
     position: absolute;
     width: 412px;
     height: 844px;
-    top: 29%;
+    top: 50%;
     left: 50%;
-    margin-top: -350px;
+    margin-top: -497px;
     margin-left: -206px;
     border-bottom: 5px solid #c9c9c9;
     border-left: none;
@@ -982,7 +983,7 @@ input {
     position: absolute;
     width: 412px;
     height: 131px;
-    top: 29%;
+    top: 50%;
     left: 50%;
     margin-top: -350px;
     margin-left: -206px;
@@ -994,9 +995,9 @@ input {
     position: absolute;
     width: 412px;
     height: 700px;
-    top: 29%;
+    top: 50%;
     left: 50%;
-    margin-top: -200px;
+    margin-top: -333px;
     margin-left: -206px;
     border-top: 5px solid #aed9ea;
     border-radius: 300px 300px 300px 300px/70px 70px 70px 70px;
@@ -1010,9 +1011,9 @@ input {
     position: absolute;
     width: 412px;
     height: 173px;
-    top: 29%;
+    top: 50%;
     left: 50%;
-    margin-top: -300px;
+    margin-top: -447px;
     margin-left: -206px;
     border-bottom: 5px solid #aed9ea;
     border-radius: 300px 300px/50px 50px;
