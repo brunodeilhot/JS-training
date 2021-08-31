@@ -1,0 +1,877 @@
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Lacquer&display=swap');
+@import 'reset';
+
+$border: #c9c9c9;
+$primary: #22436e;
+$terciary: #22567e;
+$bg-color: #aed9eac7;
+$bg-line: #aed9ea;
+$black: #000;
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    background: repeat url(../assets/background.jpg);
+    font-family: 'Gamja Flower', cursive;
+}
+
+h1 {
+    font-family: 'Lacquer', cursive;
+    font-size: 6rem;
+    font-weight: 600;
+    text-align: center;
+    color: $primary;
+    text-shadow: 0px 5px 3px $bg-line;
+    animation: onwater 3s infinite;
+}
+
+@keyframes onwater {
+    0%  {transform: rotateX(60deg) rotateZ(355deg)}
+    50% {transform: rotateX(70deg) rotateZ(355deg)}
+    100% {transform: rotateX(60deg) rotateZ(355deg)}
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 3rem;
+    color: $primary;
+    text-align: center;
+}
+
+p {
+    font-size: 2.5rem;
+    color: $primary;
+    text-align: center;
+}
+
+button {
+    font-family: 'Gamja Flower', cursive;
+    font-size: 3rem;
+    font-weight: 600;
+    outline: none;
+    color: $primary;
+    text-align: center;
+    border: none;
+    background: radial-gradient(transparent 0%, #3f79a572 20%, #3f79a59a 40%, #3f79a5bb 60%, transparent 80%);
+    border-radius: 50%;
+    padding: 10px 20px;
+    min-width: 155px;
+    box-shadow: 0px 6px 13px #22436ed4;
+}
+
+@keyframes onhover {
+    0%  {background: radial-gradient($terciary 0%, $terciary 2%, transparent 2%)}
+    10%  {background: radial-gradient(transparent 0%, transparent 10%, $terciary 10%, $terciary 12%, transparent 12%)}
+    20%  {background: radial-gradient(transparent 0%, transparent 20%, $terciary 20%, $terciary 22%, transparent 22%)}
+    30%  {background: radial-gradient(transparent 0%, transparent 30%, $terciary 30%, $terciary 32%, transparent 32%)}
+    40%  {background: radial-gradient(transparent 0%, transparent 40%, $terciary 40%, $terciary 42%, transparent 42%)}
+    50%  {background: radial-gradient(transparent 0%, transparent 50%, $terciary 50%, $terciary 52%, transparent 52%)}
+    60%  {background: radial-gradient(transparent 0%, transparent 60%, $terciary 60%, $terciary 62%, transparent 62%)}
+    70%  {background: radial-gradient(transparent 0%, transparent 70%, $terciary 70%, $terciary 72%, transparent 72%)}
+    80%  {background: radial-gradient(transparent 0%, transparent 80%, $terciary 80%, $terciary 82%, transparent 82%)}
+    90%  {background: radial-gradient(transparent 0%, transparent 90%, $terciary 90%, $terciary 92%, transparent 92%)}
+    100%  {background: radial-gradient(transparent 0%, transparent 100%, $terciary 100%)}
+}
+
+input {
+    font-family: 'Gamja Flower', cursive;
+    font-size: 3rem;
+    font-weight: 600;
+    outline: none;
+    color: $primary;
+    text-align: center;
+    border: none;
+    background: transparent;
+    // background: radial-gradient(transparent 0%, #3f79a572 20%, #3f79a59a 40%, #3f79a5bb 60%, transparent 80%);
+    border-radius: 50%;
+    padding: 5px 10px;
+    width: 80px;
+    box-shadow: 0px 6px 13px #22436ed4;
+    caret-color: $primary;
+}
+
+.active {
+    background: none;
+    animation: onhover 1s infinite;
+    box-shadow: none;
+}
+
+.container {
+    position: relative;
+    max-width: 800px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.aquarium {
+    position: absolute;
+    width: 800px;
+    height: 585px;
+    top: 50%;
+    left: 50%;
+    margin-top: -350px;
+    margin-left: -400px;
+    border: 5px solid $border;
+    border-radius: 220px 220px 270px 270px/70px 70px 285px 285px;
+}
+
+.aquarium:before {
+    content: "";
+    position: absolute;
+    width: 800px;
+    height: 161px;
+    top: 50%;
+    left: 50%;
+    margin-top: -350px;
+    margin-left: -400px;
+    border-bottom: 5px solid #c9c9c9;
+    border-radius: 300px 300px/40px 40px;
+}
+
+.aquarium-fill {
+    position: absolute;
+    width: 800px;
+    height: 475px;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -400px;
+    border-top: 5px solid $bg-line;
+    border-radius: 220px 220px 270px 270px/70px 70px 285px 285px;
+    background: $bg-color;
+    box-shadow: 0px 20px 60px $black;
+}
+
+.aquarium-fill:before {
+    content: "";
+    position: absolute;
+    width: 800px;
+    height: 155px;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -400px;
+    border-bottom: 5px solid $bg-line;
+    border-radius: 300px 300px/40px 40px;
+}
+
+.column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.col {
+    &-2 {
+        flex: 0 50%;
+    }
+    &-3 {
+        flex: 0 33.33333%;
+    }
+    &-7 {
+        flex: 0 14.2857143%;
+    }
+    &-2-10 {
+        flex: 0 10%;
+    }
+    &-2-80 {
+        flex: 0 80%;
+    }
+    &-2-90 {
+        flex: 0 90%;
+    }
+}
+
+.bold {
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.level {
+    margin-top: 50px;
+    h2 {
+        font-size: 4rem;
+    }
+    button {
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        min-width: 115px;
+    }
+}
+
+.part-1 {
+    margin-top: 120px;
+    .column {
+        align-items: center;
+    }
+    .row {
+        align-items: center;
+    }
+    button {
+        margin-top: 30px;
+    }
+}
+
+.menu {
+    margin-top: 88px
+}
+
+.part-2 {
+    margin-top: 25px;
+    h2:first-child {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    #play {
+        margin-top: 0;
+        margin-left: 5px;
+        font-size: 2.5rem;
+        padding: 10px 5px;
+        min-width: 100px;
+    }
+    input {
+        margin-right: 5px;
+    }
+    button {
+        font-size: 2rem;
+        padding: 10px 5px;
+        min-width: 140px;
+    }
+}
+
+.column-heigth {
+    min-height: 240px;
+}
+
+.center-col {
+    min-width: 320px;
+    p {
+        margin-bottom: 20px;
+    }
+}
+
+.show-box {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.show-letter {
+    font-family: 'Gamja Flower', cursive;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: $primary;
+    text-align: center;
+    background: radial-gradient(ellipse 75% 5px, transparent 0%, #3f79a572 20%, #3f79a59a 40%, #3f79a5bb 60%, transparent 80%);
+    border-radius: 50%;
+    padding: 5px 5px;
+    padding-bottom: 20px;
+    display: inline-block;
+    min-width: 20px;
+    margin-bottom: -13px;
+}
+
+.hide-letter {
+    background: none;
+    padding: 0px 0px;
+    min-width: 0px;
+    margin-bottom: 0px;
+}
+
+.ajuda {
+    margin-top: 116px;
+    margin-right: 121px;
+    margin-left: 20px;
+    p {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+}
+
+.footer {
+    button {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 0;
+    }
+}
+
+.boat-frame {
+    position: absolute;
+    min-width: 360px;
+    min-height: 141px;
+    top: 265px;
+    left: 40px;
+}
+
+.attempt-0 {
+    background: no-repeat url(../assets/attempt-0.png);
+    background-size: contain;
+    min-width: 360px;
+    min-height: 212px;
+    top: 230px;
+}
+
+.attempt-1 {
+    background: no-repeat url(../assets/attempt-1.png);
+    background-size: contain;
+}
+
+.attempt-2 {
+    background: no-repeat url(../assets/attempt-2.png);
+    background-size: contain;
+}
+
+.attempt-3 {
+    background: no-repeat url(../assets/attempt-3.png);
+    background-size: contain;
+}
+
+.attempt-4 {
+    background: no-repeat url(../assets/attempt-4.png);
+    background-size: contain;
+}
+
+.attempt-5 {
+    background: no-repeat url(../assets/attempt-5.png);
+    background-size: contain;
+}
+
+.attempt-6 {
+    background: no-repeat url(../assets/attempt-6.png);
+    background-size: contain;
+}
+
+.attempt-win {
+    background: no-repeat url(../assets/attempt-win.png);
+    background-size: contain;
+    min-width: 360px;
+    min-height: 212px;
+    top: 230px;
+}
+
+
+@media screen and (min-width:360px) and (max-width:412px) {
+
+    html {
+        font-size: 40%;
+    }
+    
+    .container {
+        position: relative;
+        max-width: 360px;
+        min-height: 100vh;
+        margin: 0 auto;
+    }
+    
+    .aquarium {
+        position: absolute;
+        width: 360px;
+        height: 710px;
+        top: 37%;
+        left: 50%;
+        margin-top: -350px;
+        margin-left: -180px;
+        border-bottom: 5px solid $border;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-radius: 300px 300px 300px 300px/70px 70px 70px 70px;
+    }
+    
+    .aquarium:before {
+        content: "";
+        position: absolute;
+        width: 360px;
+        height: 131px;
+        top: 37%;
+        left: 50%;
+        margin-top: -350px;
+        margin-left: -180px;
+        border-bottom: none;
+        border-radius: 0px;
+    }
+    
+    .aquarium-fill {
+        position: absolute;
+        width: 360px;
+        height: 575px;
+        top: 37%;
+        left: 50%;
+        margin-top: -200px;
+        margin-left: -180px;
+        border-top: 5px solid $bg-line;
+        border-radius: 300px 300px 300px 300px/70px 70px 70px 70px;
+        background: $bg-color;
+        box-shadow: 0px 20px 60px $black;
+    }
+    
+    .aquarium-fill:before {
+        content: "";
+        position: absolute;
+        width: 360px;
+        height: 153px;
+        top: 37%;
+        left: 50%;
+        margin-top: -300px;
+        margin-left: -180px;
+        border-bottom: 5px solid $bg-line;
+        border-radius: 300px 300px/50px 50px;
+    }
+
+    .part-1 {
+        margin-top: 145px;
+    }
+
+    .level {
+        .row {
+            flex-flow: column nowrap;
+        }
+    }
+    #new-game {
+        margin-top: 44px;
+    }
+
+    .m-column {
+            flex-flow: column-reverse nowrap;
+    }
+
+    .show-box {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .show-letter {
+        margin-bottom: -15px;
+    }
+
+    .boat-frame {
+        top: 424px;
+        left: 0px;
+    }
+
+    .attempt-0 {
+        top: 388px;
+    }
+
+    .attempt-win {
+        top: 388px;
+    }    
+
+    .ajuda {
+        margin-top: 36px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 13px;
+    }
+
+}
+
+
+@media screen and (min-width:412px) and (max-width:640px) {
+    
+    html {
+        font-size: 50%;
+    }
+    
+    .container {
+        position: relative;
+        max-width: 412px;
+        min-height: 100vh;
+        margin: 0 auto;
+    }
+    
+    .aquarium {
+        position: absolute;
+        width: 412px;
+        height: 844px;
+        top: 29%;
+        left: 50%;
+        margin-top: -350px;
+        margin-left: -206px;
+        border-bottom: 5px solid $border;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-radius: 300px 300px 300px 300px/70px 70px 70px 70px;
+    }
+    
+    .aquarium:before {
+        content: "";
+        position: absolute;
+        width: 412px;
+        height: 131px;
+        top: 29%;
+        left: 50%;
+        margin-top: -350px;
+        margin-left: -206px;
+        border-bottom: none;
+        border-radius: 0px;
+    }
+    
+    .aquarium-fill {
+        position: absolute;
+        width: 412px;
+        height: 700px;
+        top: 29%;
+        left: 50%;
+        margin-top: -200px;
+        margin-left: -206px;
+        border-top: 5px solid $bg-line;
+        border-radius: 300px 300px 300px 300px/70px 70px 70px 70px;
+        background: $bg-color;
+        box-shadow: 0px 20px 60px $black;
+    }
+    
+    .aquarium-fill:before {
+        content: "";
+        position: absolute;
+        width: 412px;
+        height: 173px;
+        top: 29%;
+        left: 50%;
+        margin-top: -300px;
+        margin-left: -206px;
+        border-bottom: 5px solid $bg-line;
+        border-radius: 300px 300px/50px 50px;
+    }
+
+    .part-1 {
+        margin-top: 157px;
+    }
+
+    .level {
+        .row {
+            flex-flow: column nowrap;
+        }
+    }
+    #new-game {
+        margin-top: 108px;
+    }
+
+    .menu {
+        margin-top: 159px;
+    }
+
+    .m-column {
+            flex-flow: column-reverse nowrap;
+    }
+
+    .show-letter {
+        margin-bottom: -15px;
+    }
+
+    .boat-frame {
+        top: 484px;
+        left: 0px;
+        min-width: 412px;
+        min-height: 161px;
+    }
+
+    .attempt-0 {
+        top: 444px;
+        min-width: 412px;
+        min-height: 244px;
+    }
+
+    .attempt-win {
+        top: 444px;
+        min-width: 412px;
+        min-height: 244px;
+    }    
+
+    .ajuda {
+        margin-top: 100px;
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width:640px) and (max-width:900px) and (max-height:412px) {
+
+    html {
+        font-size: 40%;
+    }
+    
+    .container {
+        position: relative;
+        max-width: 640px;
+        min-height: 100vh;
+        margin: 0 auto;
+    }
+
+    .aquarium {
+        position: absolute;
+        width: 600px;
+        height: 340px;
+        top: 50%;
+        left: 50%;
+        margin-top: -171px;
+        margin-left: -300px;
+        border-bottom: 5px solid $border !important;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-radius: 320px 320px 170px 170px/50px 50px 185px 185px;
+    }
+    
+    .aquarium:before {
+        content: "";
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%;
+        margin-top: -350px;
+        margin-left: -300px;
+        border-bottom: none;
+        border-radius: 0px;
+    }
+    
+    .aquarium-fill {
+        position: absolute;
+        width: 600px;
+        height: 340px;
+        top: 50%;
+        left: 50%;
+        margin-top: -171px;
+        margin-left: -300px;
+        border-top: 5px solid $bg-line;
+        border-radius: 320px 320px 170px 170px/50px 50px 185px 185px;
+        background: $bg-color;
+        box-shadow: 0px 20px 60px $black;
+    }
+    
+    .aquarium-fill:before {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 155px;
+        top: 50%;
+        left: 50%;
+        margin-top: -238px;
+        margin-left: -300px;
+        border-bottom: 5px solid $bg-line;
+        border-radius: 320px 320px/50px 50px;
+    }
+
+    .part-1 {
+        margin-top: 25px;
+        button {
+            margin-top: 20px;
+        }
+    }
+
+    .level {
+        margin-top: 28px;
+        .row {
+            flex-flow: row nowrap;
+        }
+    }
+
+    .menu {
+        margin-top: 64px;
+    }
+
+    #new-game {
+        margin-top: 20px;
+    }
+
+    .part-2 h2:first-child {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .m-column {
+        flex-flow: row nowrap;
+    }
+
+    .column-heigth {
+        min-height: 172px;
+    }
+
+    .boat-frame {
+        min-width: 300px;
+        min-height: 116px;
+        top: 110px;
+        left: -17px;
+    }
+
+    .show-box {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .ajuda {
+        margin-top: 76px;
+        margin-right: 106px;
+        margin-left: 76px;
+        margin-bottom: 0px;
+    }
+
+    .footer {
+        button {
+            margin-top: -10px;
+        }
+    }
+
+    .attempt-0 {
+        top: 80px;
+        left: -17px;
+        min-width: 300px;
+        min-height: 178px;
+    }
+
+    .attempt-win {
+        top: 80px;
+        left: -10px;
+        min-width: 300px;
+        min-height: 178px;
+    }    
+
+}
+
+
+@media screen and (min-width:700px) and (max-width:980px) and (max-height:620px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .container {
+        max-width: 700px;
+    }
+
+    .aquarium-fill {
+        width: 700px;
+        height: 400px;
+        margin-top: -200px;
+        margin-left: -350px;
+        border-top: 5px solid $bg-line;
+        border-radius: 320px 320px 170px 170px/50px 50px 185px 185px;
+    }
+
+    .aquarium-fill:before {
+        width: 700px;
+        height: 400px;
+        margin-top: -507px;
+        margin-left: -350px;
+        border-bottom: 5px solid $bg-line;
+        border-radius: 320px 320px/50px 50px;
+    }
+
+    .aquarium {
+        width: 700px;
+        height: 400px;
+        margin-top: -200px;
+        margin-left: -350px;
+        border-bottom: 5px solid $border !important;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-radius: 320px 320px 170px 170px/50px 50px 185px 185px;
+    }
+
+    .aquarium:before {
+        content: "";
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        top: 50%;
+        left: 50%;
+        margin-top: -350px;
+        margin-left: -300px;
+        border-bottom: none;
+        border-radius: 0px;
+    }
+
+    .part-1 {
+        margin-top: 25px;
+        button {
+            margin-top: 20px;
+        }
+    }
+
+    .level {
+        margin-top: 28px;
+        .row {
+            flex-flow: row nowrap;
+        }
+    }
+
+    .menu {
+        margin-top: 95px;
+    }
+
+    #new-game {
+        margin-top: 45px;
+    }
+
+    .part-2 h2:first-child {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .column-heigth {
+        min-height: 205px;
+    }
+
+    .show-box {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .ajuda {
+        margin-top: 76px;
+        margin-right: 106px;
+        margin-left: 76px;
+        margin-bottom: 0px;
+    }
+
+    .footer {
+        button {
+            margin-top: -10px;
+        }
+    }
+
+    .boat-frame {
+        min-width: 300px;
+        min-height: 117px;
+        top: 144px;
+        left: 33px;
+    }
+
+    .attempt-0 {
+        top: 115px;
+        left: 33px;
+        min-width: 300px;
+        min-height: 178px;
+    }
+
+    .attempt-win {
+        top: 115px;
+        left: 33px;
+        min-width: 300px;
+        min-height: 178px;
+    }
+
+}

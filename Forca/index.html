@@ -1,12 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="aquarium-fill">
+            <div class="aquarium">
+                <div class="part-1">
+                    <div class="column">
+                        <div class="col-2-10">
+                            <h1>Jogo da Forca</h1>
+                        </div>
+                        <div id="part-1" class="col-2-90">
+                            <div class="column">
+                                <div class="col-3 level">
+                                    <h2>Escolhe a dificuldade</h2>
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <button id="level1">Fácil</button>
+                                        </div>
+                                        <div class="col-3">
+                                            <button id="level2">Normal</button>
+                                        </div>
+                                        <div class="col-3">
+                                            <button id="level3">Difícil</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <button id="new-game">Novo Jogo</button>
+                                </div>
+                                <div id="menu" class="col-3">
+                                    <a href="../index.html"><button>Menu</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="part-2" class="col-2-90 part-2">
+                            <div id="boat-frame" class="col-2 boat-frame"></div>
+                            <div class="column">
+                                <div class="col-2-10">
+                                    <h2>Adivinha a palavra antes que os piratas
+                                        <br>afundem o teu barco!
+                                    </h2>
+                                </div>
+                                <div class="col-2-90">
+                                    <div class="row m-column">
+                                        <div class="col-2 ajuda">
+                                            <div class="column">
+                                                <div class="col-2">
+                                                    <button id="help">Pede ajuda!</button>
+                                                </div>
+                                                <div id="help-message1" class="col-2">
+                                                    <p>Troca até duas tentativas
+                                                        <br>por duas ajudas
+                                                    </p>
+                                                </div>
+                                                <div id="help-message2" class="col-2">
+                                                    <p>Já trocaste todas
+                                                        <br>as tuas ajudas
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 center-col">
+                                            <div class="column column-heigth">
+                                                <div class="col-3">
+                                                    <div class="row">
+                                                        <div class="col-2">
+                                                            <input type="text" id="letter" maxlength="1" autocapitalize="none" autocomplete="off" autofocus />
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <button id="play">Jogar!</button>
+                                                        </div>
+                                                    </div>
+                                                    <h2 id="end-message"></h2>
+                                                </div>
+                                                <div class="col-3 show-box">
+                                                    <span id="0" class="show-letter uppercase"></span>
+                                                    <span id="1" class="show-letter"></span>
+                                                    <span id="2" class="show-letter"></span>
+                                                    <span id="3" class="show-letter"></span>
+                                                    <span id="4" class="show-letter"></span>
+                                                    <span id="5" class="show-letter"></span>
+                                                    <span id="6" class="show-letter"></span>
+                                                    <span id="7" class="show-letter"></span>
+                                                    <span id="8" class="show-letter"></span>
+                                                    <span id="9" class="show-letter"></span>
+                                                </div>
+                                                <div class="col-3">
+                                                    <p>Letras erradas: <span id="letter-attempt" class="bold"></span></p>
+                                                    <p id="not-last-message">Ainda tens <span id="attempt-left" class="bold"></span>
+                                                        tentativas!</p>
+                                                    <p id="last-message"><span id="attempt-last" class="bold"></span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <button id="restart">Novo Jogo</button><button id="return">Voltar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
