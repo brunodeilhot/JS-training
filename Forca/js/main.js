@@ -52,7 +52,7 @@ const normal = {
 const hard = {
     1: 'tesouro',
     2: 'papagaio',
-    3: 'tubarão',
+    3: 'tubarao',
     4: 'tempestade',
     5: 'corrente',
     6: 'estrela',
