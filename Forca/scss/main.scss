@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Lacquer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&family=Patrick+Hand&display=swap');
 @import 'reset';
 
 $border: #c9c9c9;
@@ -18,7 +18,7 @@ $black: #000;
 html {
     font-size: 62.5%;
     background: repeat url(../assets/background.jpg);
-    font-family: 'Gamja Flower', cursive;
+    font-family: 'Patrick Hand', cursive;
 }
 
 h1 {
@@ -51,7 +51,7 @@ p {
 }
 
 button {
-    font-family: 'Gamja Flower', cursive;
+    font-family: 'Patrick Hand', cursive;
     font-size: 3rem;
     font-weight: 600;
     outline: none;
@@ -81,7 +81,7 @@ button {
 
 input {
     -webkit-appearance: none;
-    font-family: 'Gamja Flower', cursive;
+    font-family: 'Patrick Hand', cursive;
     font-size: 3rem;
     font-weight: 600;
     outline: none;
@@ -276,7 +276,7 @@ input {
 }
 
 .show-letter {
-    font-family: 'Gamja Flower', cursive;
+    font-family: 'Patrick Hand', cursive;
     font-size: 2.5rem;
     font-weight: 600;
     color: $primary;
@@ -461,7 +461,7 @@ input {
     }
     
     .show-letter {
-        margin-bottom: -15px;
+        margin-bottom: -14px;
     }
 
     .boat-frame {
@@ -577,7 +577,7 @@ input {
     }
 
     .show-letter {
-        margin-bottom: -15px;
+        margin-bottom: -14px;
     }
 
     .boat-frame {
@@ -720,6 +720,10 @@ input {
     .show-box {
         margin-top: 15px;
         margin-bottom: 15px;
+    }
+
+    .show-letter {
+        margin-bottom: -14px;
     }
 
     .ajuda {
