@@ -6,6 +6,8 @@ const board1 = document.querySelectorAll('.board1');
 const board2 = document.querySelectorAll('.board2');
 const board3 = document.querySelectorAll('.board3');
 
+const timerContent = document.querySelector('#countdown');
+
 const frontCard = document.querySelectorAll('.front');
 
 const newGameButton = document.querySelector('#new-game');
@@ -120,6 +122,28 @@ function clearCards() {
     }
 }
 
+function turnAllCards() {
+    if (levelId == 1) {
+        for (let i = 0; i < board1.length; i++) {
+            if (!board1[i].classList.contains('active')) {
+                board1[i].classList.add('active');
+            }
+        }
+    } else if (levelId == 2) {
+        for (let i = 0; i < board2.length; i++) {
+            if (!board2[i].classList.contains('active')) {
+                board2[i].classList.add('active');
+            }
+        }
+    } else if (levelId == 3) {
+        for (let i = 0; i < board3.length; i++) {
+            if (!board3[i].classList.contains('active')) {
+                board3[i].classList.add('active');
+            }
+        }
+    }
+}
+
 function boardGenerate(level) {
 
     checkPos = [];
@@ -152,6 +176,8 @@ function levelSelect(event) {
         positionMax = 16;
         cardMax = 8;
         levelId = 1;
+        minutes = 3;
+        seconds = 0;
         showActiveBt('#level1');
         hideActiveBt('#level2');
         hideActiveBt('#level3');
@@ -160,6 +186,8 @@ function levelSelect(event) {
         positionMax = 20;
         cardMax = 10;
         levelId = 2;
+        minutes = 2;
+        seconds = 30;
         hideActiveBt('#level1');
         showActiveBt('#level2');
         hideActiveBt('#level3');
@@ -167,11 +195,58 @@ function levelSelect(event) {
         positionMax = 24;
         cardMax = 12;
         levelId = 3;
+        minutes = 2;
+        seconds = 0;
         hideActiveBt('#level1');
         hideActiveBt('#level2');
         showActiveBt('#level3');
     }
 
+}
+
+function countdown() {
+
+    if (minutes == 0 && seconds == 0) {
+        timerContent.textContent = `00:00`;
+        return;
+    }
+
+    if (seconds == 0) {
+        minutes--;
+        seconds = 59;
+    }
+
+    if (seconds < 10) {
+        timerContent.textContent = `0${minutes}:0${seconds}`;
+        if (minutes == 0) {
+            timerContent.classList.add('end-time');
+        }
+    } else {
+        timerContent.textContent = `0${minutes}:${seconds}`;
+    }
+
+    seconds--;
+
+}
+
+function timeOut(time) {
+
+    if (time == true) {
+        if (levelId == 1) {
+            countdownTimer = setInterval(countdown, 1000);
+            timer = setTimeout(endTime, 180000);
+        } else if (levelId == 2) {
+            countdownTimer = setInterval(countdown, 1000);
+            timer = setTimeout(endTime, 150000);
+        } else {
+            countdownTimer = setInterval(countdown, 1000);
+            timer = setTimeout(endTime, 120000);
+        }
+    }
+    if (time == false) {
+        clearTimeout(timer);
+        clearInterval(countdownTimer);
+    }
 }
 
 function start() {
@@ -187,6 +262,9 @@ function start() {
     hideActiveBt('#level1');
     hideActiveBt('#level2');
     hideActiveBt('#level3');
+
+    timerContent.classList.remove('end-time');
+
 
     level1.addEventListener('click', levelSelect);
     level2.addEventListener('click', levelSelect);
@@ -208,9 +286,15 @@ function play() {
     hideContent('#part-1');
     showContent('#part-2');
 
-    returnButton.addEventListener('click', start);
+    timeOut(true);
+    returnButton.addEventListener('click', returnStart);
 
     waitMove();
+}
+
+function returnStart() {
+    timeOut(false);
+    start();
 }
 
 function waitMove() {
@@ -293,6 +377,7 @@ function validateMove(check1, check2) {
         endMessage.textContent = 'Parabéns!! Ganhaste!';
         showContent('#end-message');
         setTimeout(start, 4000);
+        timeOut(false);
     }
 
     validateCard = [];
@@ -301,5 +386,13 @@ function validateMove(check1, check2) {
     waitMove();
 }
 
+function endTime() {
+    endMessage.textContent = 'Ohhh! Acabou-se o tempo!';
+    showContent('#end-message');
+    setTimeout(start, 4000);
+    timeOut(false);
+    stopMove();
+    turnAllCards();
+}
 
 start();

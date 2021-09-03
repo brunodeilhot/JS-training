@@ -665,11 +665,30 @@ button:hover {
 }
 
 .return {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   min-height: 25px;
-  min-width: 100px;
+  min-width: 124px;
   margin-bottom: 5px;
+}
+
+.center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.timer {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.end-time {
+  color: #c10000;
 }
 
 @media screen and (min-width: 812px) and (max-width: 915px) {

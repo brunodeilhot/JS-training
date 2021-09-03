@@ -6,6 +6,8 @@ $secondary: #c8e08a;
 $terciary: #31803e;
 $white: #fff;
 $bg-color: #fec045;
+$time-red: #c10000;
+
 
 *,
 *::before,
@@ -263,11 +265,28 @@ button {
 }
 
 .return {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     min-height: 25px;
-    min-width: 100px;
+    min-width: 124px;
     margin-bottom: 5px;
+}
+
+.center {
+    align-items: center;
+    text-align: center;
+}
+
+.timer {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.end-time {
+    color: $time-red;
 }
 
 @media screen and (min-width:812px) and (max-width:915px) {
