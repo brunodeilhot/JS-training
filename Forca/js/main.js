@@ -47,7 +47,7 @@ const normal = {
     5: 'sereia',
     6: 'capitao',
     7: 'compasso'
-}
+};
 
 const hard = {
     1: 'tesouro',
@@ -57,7 +57,7 @@ const hard = {
     5: 'corrente',
     6: 'estrela',
     7: 'luneta'
-}
+};
 
 
 // Função para adicionar ou remover classes a elementos
@@ -301,6 +301,20 @@ function helpMove() {
         return;
     }
 
+    if (maxAttempts == 2) {
+        changeElement('add', 'hidden', '#not-last-message');
+        changeElement('remove', 'hidden', '#last-message');
+        lastAttempt.textContent = `Esta é a tua última tentativa!!`;
+    }
+
+    if (maxAttempts == 1) {
+        changeElement('add', 'hidden', '#letter');
+        changeElement('add', 'hidden', '#play');
+        changeElement('remove', 'hidden', '#end-message');
+        changeElement('add', 'hidden', '#last-message');
+        endMessage.textContent = `Oh não!! O teu barco foi destruído!`
+    }
+
     maxAttempts--;
     attemptsLeft.textContent = `${maxAttempts}`;
     changeImage(maxAttempts);
@@ -327,13 +341,13 @@ function helpMove() {
     if (word.length == confirmLetter.length) {
         changeElement('add', 'hidden', '#letter');
         changeElement('add', 'hidden', '#play');
+        changeElement('add', 'hidden', '#not-last-message');
+        changeElement('add', 'hidden', '#last-message');
         changeElement('remove', 'hidden', '#end-message');
         endMessage.textContent = `Boa!! Escapaste aos piratas!`
         changeImage('win');
         helpButton.removeEventListener('click', helpMove);
     }
-
-    return;
 
 }
 
