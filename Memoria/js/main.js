@@ -264,7 +264,7 @@ function start() {
     hideActiveBt('#level3');
 
     timerContent.classList.remove('end-time');
-
+    timerContent.textContent = ``;
 
     level1.addEventListener('click', levelSelect);
     level2.addEventListener('click', levelSelect);
