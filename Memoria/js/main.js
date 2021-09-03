@@ -176,8 +176,8 @@ function levelSelect(event) {
         positionMax = 16;
         cardMax = 8;
         levelId = 1;
-        minutes = 3;
-        seconds = 0;
+        minutes = 2;
+        seconds = 30;
         showActiveBt('#level1');
         hideActiveBt('#level2');
         hideActiveBt('#level3');
@@ -187,7 +187,7 @@ function levelSelect(event) {
         cardMax = 10;
         levelId = 2;
         minutes = 2;
-        seconds = 30;
+        seconds = 0;
         hideActiveBt('#level1');
         showActiveBt('#level2');
         hideActiveBt('#level3');
@@ -195,8 +195,8 @@ function levelSelect(event) {
         positionMax = 24;
         cardMax = 12;
         levelId = 3;
-        minutes = 2;
-        seconds = 0;
+        minutes = 1;
+        seconds = 30;
         hideActiveBt('#level1');
         hideActiveBt('#level2');
         showActiveBt('#level3');
@@ -234,13 +234,13 @@ function timeOut(time) {
     if (time == true) {
         if (levelId == 1) {
             countdownTimer = setInterval(countdown, 1000);
-            timer = setTimeout(endTime, 180000);
+            timer = setTimeout(endTime, 150000);
         } else if (levelId == 2) {
             countdownTimer = setInterval(countdown, 1000);
-            timer = setTimeout(endTime, 150000);
+            timer = setTimeout(endTime, 120000);
         } else {
             countdownTimer = setInterval(countdown, 1000);
-            timer = setTimeout(endTime, 120000);
+            timer = setTimeout(endTime, 90000);
         }
     }
     if (time == false) {
@@ -315,21 +315,6 @@ function waitMove() {
 
 }
 
-function stopMove() {
-    if (levelId == 1) {
-        for (let k = 0; k < board1.length; k++) {
-            board1[k].removeEventListener('click', makeMove);
-        }
-    } else if (levelId == 2) {
-        for (let k = 0; k < board2.length; k++) {
-            board2[k].removeEventListener('click', makeMove);
-        }
-    } else if (levelId == 3) {
-        for (let k = 0; k < board3.length; k++) {
-            board3[k].removeEventListener('click', makeMove);
-        }
-    }
-}
 
 function makeMove(event) {
 
@@ -353,12 +338,11 @@ function makeMove(event) {
     
     validateCard.push(temp);
 
-    const selectCard1 = validateCard[0];
-    const selectCard2 = validateCard[1];
-
     if (validateCard.length == 2) {
-        stopMove();
-        setTimeout(validateMove, 1500, selectCard1, selectCard2);
+        const selectCard1 = validateCard[0];
+        const selectCard2 = validateCard[1];
+        validateCard = [];
+        validateMove(selectCard1, selectCard2);
     }
 
 
@@ -367,8 +351,10 @@ function makeMove(event) {
 function validateMove(check1, check2) {
 
     if (checkPos[check1] != checkPos[check2]) {
-        hideActive(saveId[0]);
-        hideActive(saveId[1]);
+        const selectCard1 = saveId[0];
+        const selectCard2 = saveId[1];
+        setTimeout(hideActive, 1500, selectCard1);
+        setTimeout(hideActive, 1500, selectCard2);
     } else if (checkPos[check1] == checkPos[check2]) {
         moves.push(1)
     }
