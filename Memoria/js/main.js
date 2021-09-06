@@ -377,7 +377,6 @@ function endTime() {
     showContent('#end-message');
     setTimeout(start, 4000);
     timeOut(false);
-    stopMove();
     turnAllCards();
 }
 

@@ -277,12 +277,17 @@ button {
     text-align: center;
 }
 
+.min-w {
+    min-width: 100px;
+}
+
 .timer {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 600;
     margin-left: 20px;
     padding-left: 10px;
     padding-right: 10px;
+    color: $primary;
 }
 
 .end-time {

@@ -49,6 +49,11 @@ function clearList() {
 
 function countdown() {
 
+    if (minutes == 0 && seconds == 0) {
+        timerContent.textContent = `00:00`;
+        return;
+    }
+
     if (seconds == 0) {
         minutes--;
         seconds = 59;
@@ -136,13 +141,13 @@ function timeOut(time) {
     if (time == true) {
         if (maxAttempts == 15) {
             countdownTimer = setInterval(countdown, 1000);
-            timer = setTimeout(endTime, 119000);
+            timer = setTimeout(endTime, 120000);
         } else if (maxAttempts == 10) {
             countdownTimer = setInterval(countdown, 1000);
             timer = setTimeout(endTime, 60000);
         } else {
             countdownTimer = setInterval(countdown, 1000);
-            timer = setTimeout(endTime, 31000);
+            timer = setTimeout(endTime, 30000);
         }
     }
     if (time == false) {
