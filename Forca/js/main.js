@@ -82,6 +82,9 @@ function randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
+
+// Função para remover classes por prefixo
+
 function removeClassByPrefix(element, prefix) {
 	var regx = new RegExp('\\b' + prefix + '[^ ]*[ ]?\\b', 'g');
 	element.className = element.className.replace(regx, '');
@@ -97,11 +100,6 @@ function start() {
     changeElement('remove', 'active', '#level2');
     changeElement('remove', 'active', '#level3');
     changeElement('add', 'menu', '#menu');
-
-    word = [];
-    letterAttempts = [];
-    confirmLetter = [];
-    autoIds = [];
 
     level1.addEventListener('click', levelSelect);
     level2.addEventListener('click', levelSelect);
