@@ -36,7 +36,7 @@ I also created the design and since these are simple games it made sense to give
 This hangman game has different twist since no man is hanged if you lose, instead you are being attacked by a pirate ship and by guessing the word you will escape from the pirates.
   - Begin by choosing the difficulty which will define the length of the words and number of attempts
   - Once the game begins a random word is chosen from a list of words and the letters are split into an array
-  - The user inputs the attempt letter which is then follows a series of validations:
+  - The user inputs the attempt letter which is then followed by a series of validations:
     - Wether the letter can be found in the letters array and if the first and last index are different, then display the letters
     - How many attempts are left and display a different message if its the last attempt
     - If the letter guessed is wrong reduces the number of attempts and displays a list of letters attempted previously
