@@ -42,5 +42,5 @@ This hangman game has different twist since no man is hanged if you lose, instea
     - If the letter guessed is wrong reduces the number of attempts and displays a list of letters attempted previously
     - Reset the form if the user inputs a letter from a previous play
    - Player is also allowed to request help for two correct letters in exchange for two attempts
-   - After validation if the length of the generated word array is the same as the player's correct attempts array then a victory status is displayed
+   - After letter validation, if the length of the generated word array is the same as the player's correct attempts array then a victory status is displayed
    - Display a loose status if the attempts run out
