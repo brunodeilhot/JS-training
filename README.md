@@ -6,6 +6,7 @@ The purpose was to put into practice the knowledge of basic JavaScript functiona
 It contains four games: Guessing, TicTacToe, Memory and Hangman.
 I also created the design and since these are simple games it made sense to give them a children's game style.
 
+[Try it live](https://js-games.brunodeilhot.dev)
 
 #### Main project page
   - Simple page written in html with scss for styling
